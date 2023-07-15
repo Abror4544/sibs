@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/vars.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
 </head>
@@ -119,7 +119,7 @@
         <div class="modal__dialog">
             <div class="modal__header">
                 <div class="modal__logo">
-                    <img src="img/logo.svg" alt="">
+                    <img src="img/logo.svg" alt="" />
                 </div>
                 <button class="modal__close _close-modal">
                     <svg>
@@ -128,29 +128,25 @@
                 </button>
             </div>
 
-            <div class="modal__title text32">
-                Вход в личный кабинет
-            </div>
+            <div class="modal__title text32">Вход в личный кабинет</div>
             <form class="modal__form">
                 <fieldset class="fg _small">
                     <label>Логин *</label>
-                    <input type="text">
+                    <input type="text" />
                 </fieldset>
                 <fieldset class="fg _small">
                     <label>Пароль *</label>
-                    <input type="password">
+                    <input type="password" />
                     <button type="button" class="pass-toggle"></button>
                 </fieldset>
                 <div class="modal__nav">
                     <div class="m-check">
-                        <input type="checkbox">
+                        <input type="checkbox" />
                         <label>
                             <span>Запомнить меня</span>
                         </label>
                     </div>
-                    <a href="" class="modal__forgot text16 font2">
-                        Забыли пароль?
-                    </a>
+                    <a href="" class="modal__forgot text16 font2"> Забыли пароль? </a>
                 </div>
                 <div class="modal__nav2">
                     <button class="modal__btn m-btn m-btn-blue">
@@ -198,25 +194,23 @@
                 </svg>
             </button>
 
-            <div class="modal__title text32">
-                Заказать услугу
-            </div>
+            <div class="modal__title text32">Заказать услугу</div>
             <form class="modal__form">
                 <fieldset class="fg _small">
                     <label>Ваше Имя</label>
-                    <input type="text">
+                    <input type="text" />
                 </fieldset>
                 <fieldset class="fg _small">
                     <label>Телефон</label>
-                    <input type="tel">
+                    <input type="tel" />
                 </fieldset>
                 <fieldset class="fg _small">
                     <label>E-mail</label>
-                    <input type="email">
+                    <input type="email" />
                 </fieldset>
                 <fieldset class="fg _small">
                     <label>Услуга</label>
-                    <input type="text">
+                    <input type="text" />
                 </fieldset>
                 <fieldset class="fg _small">
                     <label>Сообщение</label>
@@ -242,20 +236,22 @@
         <div class="product-modal__slider">
             <div class="product">
                 <div class="product__img">
-                    <img src="img/product.webp" alt="">
+                    <img src="img/product.webp" alt="" />
                 </div>
                 <div class="product__content">
-                    <div class="text20 semi-bold-text">
-                        АТС Panasonic KX-TEM824RU
-                    </div>
+                    <div class="text20 semi-bold-text">АТС Panasonic KX-TEM824RU</div>
                     <div class="product-review">
                         <div class="product-review__rating text16">
-                            <img src="img/star2.svg" alt="">
+                            <img src="img/star.svg" alt="" />
+                            <img src="img/star.svg" alt="" />
+                            <img src="img/star.svg" alt="" />
+                            <img src="img/star.svg" alt="" />
+                            <img src="img/star_dark.svg" alt="" />
                             <span>4.3</span>
                         </div>
                         <span class="product-review__count text14 dark-gray-text">
-                                    10 отзывов
-                                </span>
+            10 отзывов
+          </span>
                     </div>
                     <div class="product-price">
                         <div class="product-price__top">
@@ -263,9 +259,14 @@
                                 <span class="product-price__new">3 870 ₽</span>
                                 <span class="product-price__old">4 300 ₽</span>
                             </div>
-                            <button class="favourite-btn">
-                                <span class="favourite-btn__icon"></span>
-                            </button>
+                            <div class="card__buttons card__buttons-vert">
+                                <button class="comparsion-btn">
+                                    <span class="comparsion-btn__icon"></span>
+                                </button>
+                                <button class="favourite-btn">
+                                    <span class="favourite-btn__icon"></span>
+                                </button>
+                            </div>
                         </div>
                         <div class="product-price__nav">
                             <button class="product-price__btn m-btn m-btn-blue">
@@ -291,7 +292,10 @@
                     <div class="product-desc">
                         <div class="product-desc__text text16 grey-text2">
                             <p>Аналоговая гибридная АТС</p>
-                            <p>АТС Panasonic KX-TEМ824RU — хорошее решение для предприятий малого бизнеса.</p>
+                            <p>
+                                АТС Panasonic KX-TEМ824RU — хорошее решение для предприятий малого
+                                бизнеса.
+                            </p>
                         </div>
                         <div class="product-desc__nav">
                             <a href="" class="product-desc__btn">
