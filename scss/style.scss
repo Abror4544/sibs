@@ -3043,6 +3043,7 @@ img.empty__star{
   flex-shrink: 0;
   width: 32.375em;
   position: relative;
+  z-index: 1;
 
   &._filled .header-search__result {
     opacity: 1;
@@ -6280,16 +6281,6 @@ img.empty__star{
       }
     }
   }
-}
-
-.filter-select.color .count {
-  width: 1.125em;
-  height: 1em;
-  border-radius: 0.125em;
-  margin-left: 0.25em;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
 }
 
 @media screen and (max-width: 576px) {
