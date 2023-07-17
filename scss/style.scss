@@ -306,6 +306,9 @@ a:hover {
     padding: 0 1.25em;
   }
 }
+img.empty__star{
+  width: 1.3em !important;
+}
 
 @media screen and (max-width: 576px) {
   .page {
@@ -314,6 +317,37 @@ a:hover {
 
   .container {
     padding: 0 0.625em;
+  }
+
+  .product-review__rating img {
+    width: 1em !important;
+    margin-right: 2px !important;
+  }
+
+  .product-review__rating{
+    span{
+      font-size: 0.75em;
+      line-height: normal;
+      margin-left: 2px;
+    }
+  }
+
+  .product-review__count{
+    font-size: 0.75em !important;
+    line-height: normal !important;
+  }
+
+  .catalog-item .product_thumb .swiper-slide{
+    height: 4.25em !important;
+  }
+
+  .catalog-item .swiper-buttons{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  img.empty__star{
+      width: 0.9em !important;
   }
 }
 
@@ -1658,6 +1692,15 @@ a:hover {
 
   ._mob-hide {
     display: none;
+    &.fav,
+    &.box {
+      position: relative;
+    }
+
+    .counter-header {
+      right: -4px;
+      top: -4px;
+    }
   }
 
   .grid-column4 {
@@ -1908,6 +1951,20 @@ a:hover {
   }
 }
 
+.product-price__nav {
+  min-height: 2.5em;
+
+  &._active {
+    .cartcalc {
+      display: grid;
+    }
+
+    ._show-calc {
+      display: none;
+    }
+  }
+}
+
 .catalog-card__btn {
   height: 2.5em;
 
@@ -1920,7 +1977,8 @@ a:hover {
   }
 }
 
-.catalog-card .cartcalc {
+.catalog-card .cartcalc,
+.product-price .cartcalc {
   display: none;
   padding: 0;
   width: 100%;
@@ -2272,6 +2330,7 @@ a:hover {
   .catalog-card__badges {
     top: 0.625em;
     padding: 0 0.375em 0 0.625em;
+    z-index: 4;
   }
 
   .catalog-card__info {
@@ -3161,18 +3220,6 @@ a:hover {
   }
 }
 
-._mob-hide {
-  &.fav,
-  &.box {
-    position: relative;
-  }
-
-  .counter-header {
-    right: -4px;
-    top: -4px;
-  }
-}
-
 .header__mob-btn.box {
   position: relative;
   z-index: 0;
@@ -3185,11 +3232,11 @@ a:hover {
 
 .menu__btn {
   &:not(:last-child) {
-    margin-right: 1.25em;
+    margin-right: 0.875em;
   }
 
   span {
-    font-size: 1em;
+    font-size: 13px;
     line-height: 140%;
   }
 }
@@ -5081,6 +5128,37 @@ a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: space-between;
+}
+
+.catalog-item__panel{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.catalog-item-buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.25em;
+  
+  .comparsion-btn,
+  .favourite-btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.6875em;
+  }
 }
 
 .product-review__rating {
@@ -5179,10 +5257,10 @@ a:hover {
 
   &.not {
     .product-has__icon {
-      background-color: var(--grey-color);
+      background-color: var(--red-color);
     }
     .product-has__text {
-      color: var(--grey-color);
+      color: var(--red-color);
     }
   }
 }
@@ -5759,6 +5837,10 @@ a:hover {
     }
   }
 
+  .catalog-item-buttons{
+    gap: 0.625em;
+  }
+
   .product-info {
     grid-template-columns: 100%;
     gap: 1.25em;
@@ -6192,6 +6274,9 @@ a:hover {
         width: 1.125em;
         height: 1em;
         border-radius: 0.125em;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
       }
     }
   }
@@ -6202,6 +6287,9 @@ a:hover {
   height: 1em;
   border-radius: 0.125em;
   margin-left: 0.25em;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 @media screen and (max-width: 576px) {
@@ -6630,6 +6718,12 @@ a:hover {
 
     .filter-select {
       margin: 0;
+    }
+  }
+
+  .filter-select {
+    .filter-colors {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
   }
 
@@ -10704,6 +10798,7 @@ input {
     position: relative;
     bottom: auto;
     left: auto;
+    z-index: 9;
   }
 
   .swiper-button {
